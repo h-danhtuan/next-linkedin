@@ -16,11 +16,7 @@ const HeaderLink = ({ Icon, text, feed, active, avatar, hidden }) => {
       onClick={() => avatar && signOut()}
     >
       {/* avatar or not */}
-      {avatar ? (
-        <Icon className="h-7 w-7 lg:-mb-1" src={session?.user?.image} />
-      ) : (
-        <Icon />
-      )}
+      {avatar ? <Icon className="h-7 w-7 lg:-mb-1" /> : <Icon />}
 
       <h4
         className={`text-sm ${
