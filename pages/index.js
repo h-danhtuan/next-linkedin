@@ -1,6 +1,7 @@
 import { signOut } from "next-auth/react";
 import Header from "../components/Header";
 import Head from "next/head";
+import SideBar from "../components/SideBar";
 
 export default function Home() {
   return (
@@ -10,9 +11,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="w-fit text-blue-700 font-semibold rounded-full border border-blue-700 px-5 py-1.5 transition-all hover:border-2">
-        <button onClick={signOut}>Sign Out</button>
-      </div>
+
+      <main className="flex justify-center gap-x-5 px-4 sm:px-12">
+        <div className="flex flex-col md:flex-row gap-5">
+          {/* Sidebar */}
+          <SideBar />
+
+          {/* Feed */}
+        </div>
+        {/* Widgets */}
+      </main>
     </div>
   );
 }
